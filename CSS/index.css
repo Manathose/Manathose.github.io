@@ -1,0 +1,270 @@
+h1 { 
+  width: 2084px;
+    height: 267px;
+    flex-shrink: 0;
+    color: #000;
+  
+  font-family: Inter;
+  font-size: 234px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+    margin-top: 20px;
+  }
+ 
+
+li { 
+  display: inline-block;
+}
+  
+    .smallbold {
+      color: #000;
+  
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 auto;
+    }
+  h2 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  }
+  h3 {
+    width: 224px;
+  height: 31px;
+  flex-shrink: 0;
+    color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  
+  }
+  h4 { 
+  color: #000;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;}
+  
+ .paddingtest{
+  padding-left: 25%;
+  padding-right: 25%;
+ } 
+.lt {
+  color: var(--color-brand-Salt, #FFF);
+justify-content: center;
+font-family: Rukou;
+font-size: 176px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+
+}
+.footercontainer {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr;
+grid-template-areas: "text";
+height: 263 px;
+width: 95%;
+flex-shrink: 0;
+background-color: #0339A6;
+border: 10px solid #966f26;
+
+}
+
+/* 
+Css can't live on its own. It needs an html title. 
+Works as declarations
+
+Writing CSS
+  h1 is "selector" So all h1 tags will be edited.
+  : is used instead to assign values
+  ; statement end. ends the style line.
+  is held within {}
+
+Attributes
+  class= is a naming convention 
+  you can call the convetion using .class-name
+  class="headline" call it using .headling {}
+  Call id using the #
+
+Font-families
+Provide fall back fonts by applying multiple properties
+font-family: helvetica, arial, sans-serif;
+font-style: italic;
+font-size: pixel amount; Could change the padding and bounding box. Use margins to fix it.
+font-weight: bold, or 100-900
+
+outline: solid; useful for looking at sizing.
+
+The box model
+    layered inside to out Content, padding, borer, margin
+    content: incldues text and images
+    padding: space around content, define its properties by setting its spacing attributes
+    border: a border encloses the padding and content
+    margin: the empty space around the border it is transparent.
+
+     Position elements
+     Float property { places it on the left or right side of the container wrapping text around it.}
+     Display: block; 
+     display: inline;
+     display: none;
+     display: inline-block the element itself is formatted as an inline element but you can apply  height and width
+
+    Block elements stack, inline elemetns next to eachother, html/css inline-block element sline up next to each other like inline elemnts You can give inline-block elements height and widths.
+
+    Using Relative Unites
+      CSS width Based Percentages using relative units
+
+
+      Position: static;
+      respects the flow of the content and scrolls with it. 
+      position: relative or rop. left, right, and bottom: Sets a box or thing as a reference poitn so Absolute knows where to go. For exmaple go 30 steps left of Mcdonalds. You now know where to start an where to go.
+      position: absolute;
+      Position: fixed; It is positioned on the viewport fo the browser and will always stay where  you put it even if the user scrolls down the page.
+      Position: sticky; stays fixed until it hits the top of the viewport 
+
+      CSS flesbox Create elements that grow, shrink or fit together
+      display: flex; Use it on the parent element. So a section or div that becomes a flex box container that controls the children.
+      flex-direction: row or column; dispalys as column or row. 
+
+      Even spreading etc.
+        These go into the children containers.
+        Fills any available empty space. When there are two available units you split the remaining space so on and so forth.
+        Flex-grow: 1; Fill space horizontally 
+        Flex-grow 2; 
+
+        Child 1 gets 1 flex box and child 2 gets to 2 flex box elements. So 1/3 and 2/3 of the available space left. (
+        (Super confusing)
+
+
+        align-items: aligns in container top and bottom
+            flex-start; Beginning of the container (top)
+            flex-end; Bottom of the container (bottom)
+            center; middle of container
+            baseline; text align 
+            stretch; Fills whole space but only top and bottom
+
+        Justify-content: content across the left and right 
+            flex-start; default
+            flex-end; end of container
+            center; center of container
+            space-between; evenly distributed in the line first item is beginning and last item is end.
+            space-around; Equal space around them so equal margin
+            space-evenly; space-between but includes the left and right margin.
+
+            You can nest flex-boxes lmao
+            Keep a pen and paper handy so you can draw parent child relationships
+            Flexbox only affect direct children
+
+            parents are references for the flex boxes property.
+
+            So some affect only children but are placed in the parent and others are put in the children and only affect them.
+    */
+
+
+    /* Grids
+
+        used to build 2 dimensional layouts
+        display: grid;
+        You need a grid container just like flex box
+        grid-template-columns: 25% 255 25% 25%
+        grid-template-rows: 50% 50%
+
+        Fraction Units (fr)
+        specify the space taken up by each row/column. Fraction units calculate the space it takes up
+ 
+
+        .container {
+            display: grid; 
+            grid-template-columns: 50% 50% (two columns)
+            grid-template-rows: 50% 50% (two rows)
+            grid-template-areas: 
+              "topRow topRow topRow"
+              "leftSidebar rightContent rightContent" (Name every every cell! Which is the tic tac toe box that gets formed.  )
+        }
+
+        Grid template area, Determines the grid-area::after
+        Give everything a class or ID. and Everythign needs to be targeted. 
+        
+        Grid areas name can be anything you want
+        grid-area: topRow;
+        grid-area: leftSidebar;
+        gird-area: rightContent;
+
+        GRID POSITIONING - moves the whole grid??
+        CSS Grid position move stuff left to right unless flipped
+        justify-content: 
+        start;
+        end;
+        center;
+        stretch;
+        space-around;
+        space-between;
+        space-evenly;
+
+
+        align-content: move stuff top to bottom unless flipped
+        start;
+        end;
+        center;
+        stretch;
+        space-around;
+        space-between;
+        space-evenly;
+
+        Nesting grids:
+          works like flex box
+          Just put a grid into grid.
+
+
+          Media Queries: define how CSS styles are applied in relation to the characteristics of the device viewport.
+          Viewport: refers to browser that shares the content
+          @media - determines that it is a media query
+          @media - only screen (you can also use all, print, screen, and speech.)
+          {} - hodls the css
+          so it looks like this
+          @media only screen and (max-width: 600px) {
+            body{
+              background-color: lightblue
+            }
+          }
+
+          2D transfomers
+          transform: rotate(); scale(); translate
+
+          CSS transitions
+          .example{ 
+            transition: all 0.5s ease-out;
+          }
+              property | Duration | motion ease in and out
+
+          Pseudo-class
+          a keyword that is added to any CSS selector that defines a special state of the element
+          .example:hover
+
+          .button{
+           width: 100px;
+           height 50px;
+            background-color: red;
+            transition: background-color .5s ease; this is what is trageted with :hover
+          }
+         .button:hover {
+          background-color: blue;
+
+          Keyframes:
+          simple vs complex css animations
+    */
