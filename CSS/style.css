@@ -343,3 +343,8 @@ margin: 0;
 .designProcessContainer {
   margin-top: 20px;
 }
+@media (max-width: 600px) {
+  body{
+    background-color: lightblue;
+  }
+}
